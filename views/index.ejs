@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('./partials/header') %>
+<title>Flights</title>
+<h1>Flights</h1>
+<p>This is a website about west coast flights. Please use the links in the nav bar or the buttons below to see all flights or add new ones.</p>
+<a href="/flights" class="button">All Flights</a>
+<a href="/flights/new" class="button">Add Flight</a>
+
+<%- include('./partials/footer') %>
