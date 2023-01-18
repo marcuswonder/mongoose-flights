@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const flightsCtrl = require('../controllers/flights')
+const ticketsCtrl = require('../controllers/tickets')
+
 
 /* GET flights listing. */
 router.get('/', flightsCtrl.index)

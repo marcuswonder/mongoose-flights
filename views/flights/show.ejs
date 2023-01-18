@@ -62,8 +62,38 @@
       <label>Arrival Date & Time:</label>
           <input type="datetime-local" name="arrival" >
       <br>
+      <br>
           <button type="submit">Add Information</button>
   </form>
-
+  <br>
+  <br>
+  <h3>Tickets</h3>
+  <% if (tickets.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Seat</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% tickets.forEach(function(t) { %>
+          <tr>
+            <td><%= t.seat %></td>
+            <td>$<%= t.price %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Tickets Sold</h5>
+  <% } %>
+  <br>
+  <br>
+  <h3>Assign New Ticket</h3>
+    <form id="open-new-ticket" method="GET" 
+      action="/flights/<%= flight._id %>/tickets/new" >
+      <input type="submit" value="Assign Ticket"/>
+    </form>
 
 <%- include('../partials/footer') %>

@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema
+// const ticketSchema = require('./controllers/ticket')
+
 
 const destinationSchema = new Schema({
     airport: {
@@ -38,7 +40,7 @@ const flightSchema = new Schema({
             return newDate
         }
     },
-    destinations: [destinationSchema]
+    destinations: [destinationSchema],
 }, {
     timestamps: true
 })
